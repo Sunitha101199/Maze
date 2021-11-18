@@ -25,7 +25,7 @@ public class Maze {
         // your code goes here
     }
 
-    // does the system percolate?
+    // does the system has connection from top to bottom?
     public boolean isConnected() {
         // your code goes here
     }

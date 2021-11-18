@@ -37,6 +37,7 @@ public class Maze {
 
         // read in pair of integers from standard input
         // if they are not yet connected, connect them
+        Stopwatch timer = new Stopwatch();
         Maze maze = new Maze(n);
         while (!in.isEmpty()) {
             int i = in.readInt();
@@ -45,5 +46,8 @@ public class Maze {
                 maze.open(i, j);
             }
         }
+        double elapsedTime = timer.elapsedTime();
+        System.out.println(args[0]);
+        System.out.printf("%.2f seconds\n", elapsedTime);
     }
 }

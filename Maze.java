@@ -1,8 +1,8 @@
 public class Maze {
     
     private boolean[][] grid;
-    private final QuickFindUF wqfGrid;
-    private final QuickFindUF wqfFull;
+    private final WeightedQuickUnionPathCompressionUF wqfGrid;
+    private final WeightedQuickUnionPathCompressionUF wqfFull;
     private final int gridSize;
     private final int virtualTop;
     private final int virtualBottom;
@@ -14,8 +14,8 @@ public class Maze {
         int gridSquared = n * n;
         gridSize = n;
         grid = new boolean[gridSize][gridSize];
-        wqfGrid = new QuickFindUF(gridSquared + 2);
-        wqfFull = new QuickFindUF(gridSquared + 1);
+        wqfGrid = new WeightedQuickUnionPathCompressionUF(gridSquared + 2);
+        wqfFull = new WeightedQuickUnionPathCompressionUF(gridSquared + 1);
         virtualBottom = gridSquared + 1;
         virtualTop = gridSquared;
         openSites = 0;
